@@ -1,6 +1,4 @@
-# @mapbox/rehype-prism
-
-[![Build Status](https://travis-ci.com/mapbox/rehype-prism.svg?branch=main)](https://travis-ci.com/mapbox/rehype-prism)
+# @neos21/rehype-prism
 
 [rehype](https://github.com/wooorm/rehype) plugin to highlight code blocks in HTML with [Prism] (via [refractor]).
 
@@ -11,8 +9,8 @@ If you would like to perform syntax highlighting *in the browser*, you should lo
 
 ## Installation
 
-```
-npm install @mapbox/rehype-prism
+```sh
+$ npm install @neos21/rehype-prism
 ```
 
 ## API
@@ -38,6 +36,32 @@ By default, if `{name}` does not correspond to a [language supported by refracto
 
 If you would like to silently skip `<code>` elements with invalid languages, set this option to `true`.
 
+#### options.aliases
+
+Type: `object`.
+Default: `undefined`.
+
+Register a new alias for the name language.
+
+```javascript
+const unified = require('unified');
+const remarkParse = require('remark-parse');
+const remarkRehype = require('remark-rehype');
+const rehypePrism = require('@neos21/rehype-prism');
+const rehypeStringify = require('rehype-stringify');
+
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkRehype)
+  .use(rehypePrism, {
+    aliases: {
+      bash: 'sh',
+      markdown: 'mdown'
+    }
+  })
+  .use(rehypeStringify);
+```
+
 ## Usage
 
 Use this package [as a rehype plugin](https://github.com/rehypejs/rehype/blob/master/doc/plugins.md#using-plugins).
@@ -46,7 +70,7 @@ Some examples of how you might do that:
 
 ```js
 const rehype = require('rehype');
-const rehypePrism = require('@mapbox/rehype-prism');
+const rehypePrism = require('@neos21/rehype-prism');
 
 rehype()
   .use(rehypePrism)
@@ -56,7 +80,7 @@ rehype()
 ```js
 const unified = require('unified');
 const rehypeParse = require('rehype-parse');
-const rehypePrism = require('@mapbox/rehype-prism');
+const rehypePrism = require('@neos21/rehype-prism');
 
 unified()
   .use(rehypeParse)
@@ -70,7 +94,7 @@ If you'd like to get syntax highlighting in Markdown, parse the Markdown (with r
 const unified = require('unified');
 const remarkParse = require('remark-parse');
 const remarkRehype = require('remark-rehype');
-const rehypePrism = require('@mapbox/rehype-prism');
+const rehypePrism = require('@neos21/rehype-prism');
 
 unified()
   .use(remarkParse)
@@ -104,3 +128,19 @@ unified()
 [refractor]: https://github.com/wooorm/refractor
 
 [language supported by refractor]: https://github.com/wooorm/refractor#syntaxes
+
+
+## Author
+
+[Neo](https://neos21.net/)
+
+- [GitHub - rehype-prism](https://github.com/Neos21/rehype-prism)
+- [npm - @neos21/rehype-prism](https://www.npmjs.com/package/@neos21/rehype-prism)
+
+
+## Links
+
+- [Neo's World](https://neos21.net/)
+- [Neo's GitHub Pages](https://neos21.github.io/)
+- [Corredor](https://neos21.hatenablog.com/)
+- [GitHub - Neos21](https://github.com/Neos21/)
