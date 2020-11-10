@@ -1,5 +1,7 @@
 # @neos21/rehype-prism
 
+[![NPM Version](https://img.shields.io/npm/v/@neos21/rehype-prism.svg)](https://www.npmjs.com/package/@neos21/rehype-prism) [![GPR Version](https://img.shields.io/github/package-json/v/neos21/rehype-prism?label=github)](https://github.com/Neos21/rehype-prism/packages/496088)
+
 [rehype](https://github.com/wooorm/rehype) plugin to highlight code blocks in HTML with [Prism] (via [refractor]).
 
 (If you would like to highlight code blocks with [highlight.js](https://github.com/isagalaev/highlight.js), instead, check out [rehype-highlight](https://github.com/wooorm/rehype-highlight).)
