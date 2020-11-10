@@ -27,6 +27,13 @@ module.exports = (options) => {
       parent.properties.className = (parent.properties.className || []).concat(
         'language-' + lang
       );
+      
+      if(options.aliases) {
+        Object.keys(options.aliases).forEach((name) => {
+          refractor.alias(name, options.aliases[name]);
+        });
+      }
+      
       result = refractor.highlight(nodeToString(node), lang);
     } catch (err) {
       if (options.ignoreMissing && /Unknown language/.test(err.message)) {
