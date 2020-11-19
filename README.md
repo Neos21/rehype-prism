@@ -132,17 +132,9 @@ unified()
 [language supported by refractor]: https://github.com/wooorm/refractor#syntaxes
 
 
-## Author
-
-[Neo](https://neos21.net/)
-
-- [GitHub - rehype-prism](https://github.com/Neos21/rehype-prism)
-- [npm - @neos21/rehype-prism](https://www.npmjs.com/package/@neos21/rehype-prism)
-
-
 ## Links
 
 - [Neo's World](https://neos21.net/)
-- [Neo's GitHub Pages](https://neos21.github.io/)
-- [Corredor](https://neos21.hatenablog.com/)
 - [GitHub - Neos21](https://github.com/Neos21/)
+- [GitHub - rehype-prism](https://github.com/Neos21/rehype-prism)
+- [npm - @neos21/rehype-prism](https://www.npmjs.com/package/@neos21/rehype-prism)
